@@ -1,0 +1,8 @@
+dataserver: tcp://10.0.0.1:5556
+camserver: tcp://10.0.0.1:5557
+controller: tcp://192.168.7.83:5558
+
+nocam: rtsp://admin:aoeuaoeu4@192.168.86.35:554/Streaming/Channels/101/
+nocam: rtsp://admin:aoeuaoeu4@192.168.7.40:554/Streaming/Channels/101/
+cam: rtsp://admin:aoeuaoeu4@192.168.7.86:554/Streaming/Channels/101/
+nocam: rtsp://admin:aoeuaoeu4@192.168.86.47:554/Streaming/Channels/101/
