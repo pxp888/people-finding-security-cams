@@ -12,6 +12,9 @@ The last container is a recorder.  This keeps a buffer of thirty seconds so that
 
 Lastly, there are also optional desktop apps which tie into the system and display video feeds, or act as alarms.  These are implemented in PyQt and don't require a dockerized container and GPU.  They are very simply implemented, with a QLabel acting as a display device.  This is very basic, but it worked.  
 
+Each container is running a simple python script, cam.py on the first, engine.py on the recognition container, and recorder.py on the recorder.  the other scripts are helper classes.  watcher.py is a very simple viewing app which was written to run on a raspberry pi.  
+They all share a config file that lets them know the IP addresses for each container, and the RTSP addresses for any cameras in use.  
+
 ## Facial recognition
 For the first implementation I had planned to use facial recognition to disarm the system.  This was also very easy to set up with python's facial recognition module.  This actually worked, but having both algorithms work from the same cameras was a problem.  the detection was very efficient, even at a distance.  Facial recognition didn't work well unless the target was very close to the camera.  This meant that disarming the system required either a lengthy walk, or more cameras placed in more strategic locations.  At the time I didn't want either of these, so this idea needs work.  
 
